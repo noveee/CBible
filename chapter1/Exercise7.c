@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int x = EOF;
-    printf("%d\n", x);
+    while (getchar() != EOF){
+        printf("%d\n", EOF);
+    }
 }
