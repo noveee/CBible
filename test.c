@@ -1,9 +1,13 @@
 #include <stdio.h> 
 
 int main(){
-    int f;
+    int count, newline;
+    newline = 0;
 
-    for (f = 0; f <= 300; f = f + 20){
-        printf("%3d %6.1\n", f, (5.0/9.0) * (f - 32));
+    while ((count = getchar()) != EOF){
+        if (count == '\n'){
+            ++newline;
+        }
     }
+    printf("%d\n", newline);
 }
