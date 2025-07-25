@@ -1,13 +1,19 @@
 #include <stdio.h> 
 
 int main(){
-    int c;
+    int c, blanks;
 
     while ((c = getchar()) != EOF){
-        if (c == 32){
-            printf("\nBlank\n");
+        blanks = 0;
+        while (c == 32){
+            ++blanks;
+            printf("%d\n", blanks);
+            c = NULL;
         }
-        
+
+        if (blanks != 0){
+            c = 32;
+        }
         putchar(c);
     }
 }
