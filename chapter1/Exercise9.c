@@ -1,19 +1,22 @@
 #include <stdio.h> 
 
 int main(){
-    int c, blanks;
+    int c, blank;
 
     while ((c = getchar()) != EOF){
-        blanks = 0;
+        
         while (c == 32){
-            ++blanks;
-            printf("%d\n", blanks);
-            c = NULL;
+            c = 0;
+            blank = 1;
+            
+            if ((c = getchar()) != 32){
+                int b = c;
+                c = 32;
+                putchar(c);
+                c = b;
+            }
         }
 
-        if (blanks != 0){
-            c = 32;
-        }
         putchar(c);
     }
 }
